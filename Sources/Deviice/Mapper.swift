@@ -114,7 +114,7 @@ public struct Mapper {
             
         // MARK: Simulators
         case .i386, .x86_64, .arm64:
-            let id = Identifier.init(rawValue: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS")!
+            let id = Identifier(rawValue: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "iOS") ?? .unknown
             return .simulator(Mapper.model(from: id))
             
         // MARK: Unknown

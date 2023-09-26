@@ -179,7 +179,7 @@ extension Identifier {
     
     /// This is the identifier of the current device.
     static var current: Identifier {
-        return Identifier.init(rawValue: rawIdentifier) ?? .unknown
+        return Identifier(rawValue: rawIdentifier) ?? .unknown
     }
 }
 
