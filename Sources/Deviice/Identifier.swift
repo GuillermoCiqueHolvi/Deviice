@@ -76,6 +76,10 @@ public enum Identifier: String, CaseIterable {
     case iPhone15_5         = "iPhone15,5"
     case iPhone16_1         = "iPhone16,1"
     case iPhone16_2         = "iPhone16,2"
+    case iPhone17_1         = "iPhone17,1"
+    case iPhone17_2         = "iPhone17,2"
+    case iPhone17_3         = "iPhone17,3"
+    case iPhone17_4         = "iPhone17,4"
     
     // MARK: iPad
     case iPad2_1            = "iPad2,1"
@@ -111,6 +115,10 @@ public enum Identifier: String, CaseIterable {
     case iPad13_17          = "iPad13,17"
     case iPad13_18          = "iPad13,18"
     case iPad13_19          = "iPad13,19"
+    case iPad14_8           = "iPad14,8"
+    case iPad14_9           = "iPad14,9"
+    case ipad14_10          = "iPad14,10"
+    case iPad14_11          = "iPad14,11"
     
     // MARK: iPad Mini
     case iPad2_5            = "iPad2,5"
@@ -128,7 +136,9 @@ public enum Identifier: String, CaseIterable {
     case iPad11_2           = "iPad11,2"
     case iPad14_1           = "iPad14,1"
     case iPad14_2           = "iPad14,2"
-    
+    case iPad16_1           = "iPad16,1"
+    case iPad16_2           = "iPad16,2"
+
     // MARK: iPad Pro
     case iPad6_3            = "iPad6,3"
     case iPad6_4            = "iPad6,4"
@@ -162,6 +172,10 @@ public enum Identifier: String, CaseIterable {
     case iPad14_4           = "iPad14,4"
     case iPad14_5           = "iPad14,5"
     case iPad14_6           = "iPad14,6"
+    case iPad16_3           = "iPad16,3"
+    case iPad16_4           = "iPad16,4"
+    case iPad16_5           = "iPad16,5"
+    case iPad16_6           = "iPad16,6"
     
     // MARK: Simulator
     case i386               = "i386"
@@ -179,7 +193,7 @@ extension Identifier {
     
     /// This is the identifier of the current device.
     static var current: Identifier {
-        return Identifier(rawValue: rawIdentifier) ?? .unknown
+        return Identifier.init(rawValue: rawIdentifier) ?? .unknown
     }
 }
 
